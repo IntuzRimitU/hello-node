@@ -1,0 +1,13 @@
+name: EC2-CI/CD-NodeJS
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    name: Deploy to EC2 on workflow dispatch.
+    runs-on: self-hosted
+    
+    steps:
+      - name: Checkout the files
+        uses: actions/checkout@v2
